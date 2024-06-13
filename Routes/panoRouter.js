@@ -3,7 +3,7 @@ const Controller = require('../Controllers/panoController');
 
 const panoRouter = ((req,res) => {
 
-    if(req.method === 'GET' && req.url.match(/\/api\/panoramas\/\?hotel=\w+&appType=\w+&appId=\w+/)) {
+    if(req.method === 'GET' && req.url.match(/\/panoramas\/\?hotel=\w+&appType=\w+&appId=\w+/)) {
         console.log('httpGetPanoramaScene from router');
         Controller.httpGetPanoramaScene(req, res);
     }else {
